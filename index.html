@@ -27,7 +27,21 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
+<script>
 
+const toggleButton = document.createElement("button");
+
+toggleButton.innerText = "Toggle Theme";
+
+toggleButton.classList.add("theme-toggle");
+
+document.querySelector("nav").appendChild(toggleButton);
+
+toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+});
+
+</script>
 <body>
 
   <!-- Skip Navigation -->
@@ -50,66 +64,109 @@
   </header>
 
   <!-- MAIN -->
-  <main id="main-content">
+ <main id="main-content">
 
     <!-- HERO -->
-    <section aria-labelledby="hero-heading">
-      <h2 id="hero-heading">Welcome to My Portfolio</h2>
+    <section class="hero">
 
-      <p>
-        Computer Science Engineering student passionate about programming,
-        design, and building creative tech projects.
-      </p>
+        <div class="hero-text">
+            <h2>Hello, I'm <span>Drishti</span></h2>
 
-      <a href="projects.html" class="button">View Projects</a>
+            <p>
+                Computer Science Engineering student passionate about
+                programming, UI/UX, web development and creative technology.
+            </p>
+
+            <a href="projects.html" class="button">
+                View Projects
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/300"
+                 alt="Profile picture">
+        </div>
+
     </section>
 
     <!-- SKILLS -->
-    <section aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
+    <section>
 
-      <article>
-        <h3>Programming Languages</h3>
-        <ul>
-          <li>C</li>
-          <li>C++</li>
-          <li>Python</li>
-          <li>Java</li>
-        </ul>
-      </article>
+        <h2 class="section-title">Skills</h2>
 
-      <article>
-        <h3>Tools & Technologies</h3>
-        <ul>
-          <li>Arduino</li>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>Git & GitHub</li>
-        </ul>
-      </article>
+        <div class="skills-grid">
+
+            <article class="skill-card">
+                <h3>Programming</h3>
+
+                <ul>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
+            </article>
+
+            <article class="skill-card">
+                <h3>Web Development</h3>
+
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </article>
+
+            <article class="skill-card">
+                <h3>Tools</h3>
+
+                <ul>
+                    <li>GitHub</li>
+                    <li>Arduino</li>
+                    <li>Canva</li>
+                </ul>
+            </article>
+
+        </div>
+
     </section>
 
-    <!-- FEATURED PROJECTS -->
-    <section aria-labelledby="featured-projects-heading">
-      <h2 id="featured-projects-heading">Featured Projects</h2>
+    <!-- PROJECTS -->
+    <section>
 
-      <article>
-        <h3>Arduino Traffic Light Simulator</h3>
-        <p>
-          A simulation project using Arduino and LEDs to mimic real-world
-          traffic control systems.
-        </p>
-      </article>
+        <h2 class="section-title">Projects</h2>
 
-      <article>
-        <h3>DC Motor Speed Controller</h3>
-        <p>
-          Built a PWM-based motor speed control system using Arduino.
-        </p>
-      </article>
+        <div class="projects-grid">
+
+            <article class="project-card">
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    Modern responsive portfolio using semantic HTML5 and CSS3.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>Arduino Traffic Simulator</h3>
+
+                <p>
+                    Arduino-based real world traffic signal simulation system.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>Motor Speed Controller</h3>
+
+                <p>
+                    PWM-based DC motor speed control project using Arduino.
+                </p>
+            </article>
+
+        </div>
+
     </section>
 
-  </main>
+</main>
 
   <!-- FOOTER -->
   <footer>
